@@ -39,6 +39,23 @@ gamend(){
     git commit --amend --no-edit -a && git push -f
 }
 
+grepo() {
+  local remote_info=$(git remote get-url origin 2>/dev/null)
+  if [[ -n "$remote_info" ]]; then
+    local repo_url="$remote_info"
+    if [[ "$repo_url" =~ ^git@github\.com:([^/]+)/([^.]+)\.git$ ]]; then
+      repo_url="https://github.com/${BASH_REMATCH[1]}/${BASH_REMATCH[2]}"
+    elif [[ "$repo_url" =~ ^https?://github\.com/([^/]+)/([^.]+)\.git$ ]]; then
+      repo_url="${repo_url%.git}"
+    fi
+    echo "Opening repository URL in browser: $repo_url"
+    xdg-open "$repo_url"
+  else
+    echo "Error: Could not extract the 'origin' repository URL."
+    return 1
+  fi
+}
+
 setup-ssh(){
   ssh-keygen -t ed25519 -C "m.alvee8141@gmail.com"
   eval "$(ssh-agent -s)"
