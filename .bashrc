@@ -38,3 +38,24 @@ gupstream() {
 gamend(){
     git commit --amend --no-edit -a && git push -f
 }
+
+setup-ssh(){
+  ssh-keygen -t ed25519 -C "m.alvee8141@gmail.com"
+  eval "$(ssh-agent -s)"
+  ssh-add ~/.ssh/id_ed25519
+  cat ~/.ssh/id_ed25519.pub
+}
+
+setup-go() {
+	wget https://go.dev/dl/go1.24.1.linux-amd64.tar.gz
+	sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.24.1.linux-amd64.tar.gz
+	rm go1.24.1.linux-amd64.tar.gz
+    export PATH=$PATH:/usr/local/go/bin
+	go install github.com/nametake/golangci-lint-langserver@latest
+	go install golang.org/x/tools/gopls@latest
+  go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+  go install golang.org/x/tools/cmd/goimports@latest
+  go install github.com/go-delve/delve/cmd/dlv@latest
+}
+
+export PATH=$PATH:/usr/local/go/bin
