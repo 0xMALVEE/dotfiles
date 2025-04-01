@@ -75,4 +75,48 @@ setup-go() {
   go install github.com/go-delve/delve/cmd/dlv@latest
 }
 
+cinclude() {
+    local workspaceFolder="\${workspaceFolder}"  # Keep as a literal string
+    local json_file=".vscode/c_cpp_properties.json"
+
+    # Ensure the .vscode directory exists
+    mkdir -p "$(dirname "$json_file")"
+
+    # Collect all header files
+    local includes=()
+    for dir in "$@"; do
+        while IFS= read -r -d '' file; do
+            # Get the relative path correctly, ensuring it starts with "/bpf"
+            local rel_path="${file#$(pwd)}"
+            rel_path="${rel_path#./}"  # Remove leading "./" if present
+            includes+=("\"${workspaceFolder}/${rel_path#"/"}\"")  # Ensure "/" is always present
+        done < <(find "$dir" -type f -name "*.h" -print0)
+    done
+
+    # Format JSON properly
+    cat > "$json_file" <<EOF
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": ["\${workspaceFolder}/**"],
+            "forcedInclude": [
+                $(printf "%s,\n                " "${includes[@]}" | sed '$s/,$//')
+            ],
+            "intelliSenseMode": "clang-x64",
+            "compilerPath": "/usr/bin/clang"
+        }
+    ],
+    "version": 4
+}
+EOF
+
+    echo "Updated $json_file with forced includes."
+}
+
+# Shortcut function for Tetragon headers
+c-tetra() {
+    cinclude ./bpf/include ./bpf/lib ./bpf/libbpf
+}
+
 export PATH=$PATH:/usr/local/go/bin
