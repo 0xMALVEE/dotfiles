@@ -104,7 +104,7 @@ cinclude() {
                 $(printf "%s,\n                " "${includes[@]}" | sed '$s/,$//')
             ],
             "intelliSenseMode": "clang-x64",
-            "compilerPath": "/usr/bin/clang"
+            "compilerPath": "/usr/bin/gcc"
         }
     ],
     "version": 4
@@ -116,7 +116,7 @@ EOF
 
 # Shortcut function for Tetragon headers
 c-tetra() {
-    cinclude ./bpf/include ./bpf/lib ./bpf/libbpf
+    cinclude ./bpf/include ./bpf/lib ./bpf/libbpf ./bpf/tetragon
 }
 
 export PATH=$PATH:/usr/local/go/bin
