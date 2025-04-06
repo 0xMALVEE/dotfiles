@@ -119,4 +119,8 @@ c-tetra() {
     cinclude ./bpf/include ./bpf/lib ./bpf/libbpf ./bpf/tetragon
 }
 
+c-cilium(){
+    cinclude ./bpf/include ./bpf/lib
+}
+
 export PATH=$PATH:/usr/local/go/bin
