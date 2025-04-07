@@ -1,0 +1,25 @@
+{
+  "makefile.extensionOutputFolder": "./.vscode",
+  "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
+  "C_Cpp.default.compilerPath": "/home/kev/clang+llvm-11.1.0-x86_64-linux-gnu-ubuntu-16.04/bin/clang",
+  "C_Cpp.default.includePath": [
+          "bpf/include",
+          "bpf/lib",
+          "bpf/libbpf"
+  ],
+  "editor.insertSpaces": false,
+  "editor.tabSize": 8,
+  "C_Cpp.intelliSenseEngineFallback": "enabled",
+  "C_Cpp.errorSquiggles": "disabled",
+  "files.associations": {
+          "basic.h": "c",
+          "type_traits": "c",
+          "retprobe_map.h": "c",
+          "probe_read_kernel_or_user.h": "c",
+          "generic_calls.h": "c",
+          "numbers": "c",
+          "bpf_core_read.h": "c",
+          "bpf_tracing.h": "c",
+          "vmlinux.h": "c"
+  }
+}
