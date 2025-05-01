@@ -32,6 +32,8 @@
       "alt-shift-ctrl-j": "editor::SelectToPreviousWordStart",
       "alt-shift-i": "editor::SelectUp",
       "alt-shift-k": "editor::SelectDown",
+      "alt-ctrl-shift-i": "editor::SelectUp",
+      "alt-ctrl-shift-k": "editor::SelectDown",
       "alt-ctrl-l": "editor::MoveToNextWordEnd",
       "alt-ctrl-j": "editor::MoveToPreviousWordStart",
       "ctrl-alt-u": "editor::MoveToBeginning",
