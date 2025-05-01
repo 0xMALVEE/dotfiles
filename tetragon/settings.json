@@ -1,25 +1,44 @@
-{
-  "makefile.extensionOutputFolder": "./.vscode",
-  "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
-  "C_Cpp.default.compilerPath": "/home/kev/clang+llvm-11.1.0-x86_64-linux-gnu-ubuntu-16.04/bin/clang",
-  "C_Cpp.default.includePath": [
-          "bpf/include",
-          "bpf/lib",
-          "bpf/libbpf"
-  ],
-  "editor.insertSpaces": false,
-  "editor.tabSize": 8,
-  "C_Cpp.intelliSenseEngineFallback": "enabled",
-  "C_Cpp.errorSquiggles": "disabled",
-  "files.associations": {
-          "basic.h": "c",
-          "type_traits": "c",
-          "retprobe_map.h": "c",
-          "probe_read_kernel_or_user.h": "c",
-          "generic_calls.h": "c",
-          "numbers": "c",
-          "bpf_core_read.h": "c",
-          "bpf_tracing.h": "c",
-          "vmlinux.h": "c"
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      // "j k": ["workspace::SendKeystrokes", "escape"]
+      "alt-i": "editor::MoveUp",
+      "alt-k": "editor::MoveDown",
+      "alt-j": "editor::MoveLeft",
+      "alt-ctrl-i": "editor::MoveUp",
+      "alt-ctrl-k": "editor::MoveLeft",
+      "alt-l": "editor::MoveRight",
+      "alt-o": "editor::MoveToEndOfLine",
+      "alt-u": "editor::MoveToBeginningOfLine",
+      "alt-shift-u": "editor::SelectToBeginningOfLine",
+      "alt-shift-o": "editor::SelectToEndOfLine",
+      "alt-shift-j": "editor::SelectLeft",
+      "alt-shift-l": "editor::SelectRight",
+      "alt-shift-ctrl-l": "editor::SelectToNextWordEnd",
+      "alt-shift-ctrl-j": "editor::SelectToPreviousWordStart",
+      "alt-shift-i": "editor::SelectUp",
+      "alt-shift-k": "editor::SelectDown",
+      "alt-ctrl-shift-i": "editor::SelectUp",
+      "alt-ctrl-shift-k": "editor::SelectDown",
+      "alt-ctrl-l": "editor::MoveToNextWordEnd",
+      "alt-ctrl-j": "editor::MoveToPreviousWordStart",
+      "ctrl-alt-u": "editor::MoveToBeginning",
+      "ctrl-alt-o": "editor::MoveToEnd",
+      "ctrl-2": "pane::SplitRight"
+    }
   }
-}
+]
