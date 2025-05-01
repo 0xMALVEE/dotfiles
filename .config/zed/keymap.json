@@ -1,0 +1,40 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      // "j k": ["workspace::SendKeystrokes", "escape"]
+      "alt-i": "editor::MoveUp",
+      "alt-k": "editor::MoveDown",
+      "alt-j": "editor::MoveLeft",
+      "alt-ctrl-i": "editor::MoveUp",
+      "alt-ctrl-k": "editor::MoveLeft",
+      "alt-l": "editor::MoveRight",
+      "alt-o": "editor::MoveToEndOfLine",
+      "alt-u": "editor::MoveToBeginningOfLine",
+      "alt-shift-u": "editor::SelectToBeginningOfLine",
+      "alt-shift-o": "editor::SelectToEndOfLine",
+      "alt-shift-j": "editor::SelectLeft",
+      "alt-shift-l": "editor::SelectRight",
+      "alt-shift-i": "editor::SelectUp",
+      "alt-shift-k": "editor::SelectDown",
+      "alt-ctrl-l": "editor::MoveToNextWordEnd",
+      "alt-ctrl-j": "editor::MoveToPreviousWordStart",
+      "ctrl-alt-u": "editor::MoveToBeginning",
+      "ctrl-alt-o": "editor::MoveToEnd",
+      "ctrl-2": "pane::SplitRight"
+    }
+  }
+]
