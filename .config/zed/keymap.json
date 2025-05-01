@@ -28,6 +28,8 @@
       "alt-shift-o": "editor::SelectToEndOfLine",
       "alt-shift-j": "editor::SelectLeft",
       "alt-shift-l": "editor::SelectRight",
+      "alt-shift-ctrl-l": "editor::SelectToNextWordEnd",
+      "alt-shift-ctrl-j": "editor::SelectToPreviousWordStart",
       "alt-shift-i": "editor::SelectUp",
       "alt-shift-k": "editor::SelectDown",
       "alt-ctrl-l": "editor::MoveToNextWordEnd",
