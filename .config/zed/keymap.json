@@ -41,7 +41,8 @@
       "ctrl-1": ["workspace::ActivatePane", 0],
       "ctrl-2": ["workspace::ActivatePane", 1],
       "ctrl-3": ["workspace::ActivatePane", 2],
-      "ctrl-4": ["workspace::ActivatePane", 3]
+      "ctrl-4": ["workspace::ActivatePane", 3],
+      "ctrl-o": ["workspace::SendKeystrokes", "ctrl-shift-p outline enter"]
     }
   }
 ]
