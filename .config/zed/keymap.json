@@ -38,7 +38,10 @@
       "alt-ctrl-j": "editor::MoveToPreviousWordStart",
       "ctrl-alt-u": "editor::MoveToBeginning",
       "ctrl-alt-o": "editor::MoveToEnd",
-      "ctrl-2": "pane::SplitRight"
+      "ctrl-1": ["workspace::ActivatePane", 0],
+      "ctrl-2": ["workspace::ActivatePane", 1],
+      "ctrl-3": ["workspace::ActivatePane", 2],
+      "ctrl-4": ["workspace::ActivatePane", 3]
     }
   }
 ]
