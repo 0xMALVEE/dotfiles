@@ -1,5 +1,4 @@
 {
-  "icon_theme": "Charmed Icons",
   "base_keymap": "VSCode",
   "telemetry": {
     "diagnostics": false,
