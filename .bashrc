@@ -230,6 +230,14 @@ setup-zed() {
   setup-zed-config
 }
 
+dev-tools() {
+  if [ -f /etc/fedora-release ]; then
+    echo "Fedora detected. Installing development tools..."
+    sudo dnf install @development-tools
+  else
+    echo "Not a Fedora system. Skipping development tools installation."
+  fi
+}
 
 setup-flatpak() {
   if command -v flatpak >/dev/null 2>&1; then
@@ -422,5 +430,6 @@ setup-linux () {
   setup-flatpack-apps
   setup-node-pnpm
 
+  dev-tools
   setup-ssh
 }
