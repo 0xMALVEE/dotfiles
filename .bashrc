@@ -368,6 +368,44 @@ setup-node-pnpm(){
   pnpm -v
 }
 
+setup-repos(){
+  gclone git@github.com:0xMALVEE/aistor-console.git
+  gclone git@github.com:0xMALVEE/eos.git
+  gclone git@github.com:0xMALVEE/ec.git
+  gclone git@github.com:0xMALVEE/mc.git
+  gclone git@github.com:0xMALVEE/minio.git
+  gclone git@github.com:0xMALVEE/madmin-go.git
+  gclone git@github.com:0xMALVEE/object-browser.git
+
+  cd ~/code/aistor-console
+  gupstream git@github.com:miniohq/aistor-console.git
+  gsync
+
+  cd ~/code/eos
+  gupstream git@github.com:miniohq/eos.git
+  gsync
+
+  cd ~/code/ec
+  gupstream git@github.com:0xMALVEE/ec.git
+  gsync
+
+  cd ~/code/mc
+  gupstream git@github.com:minio/mc.git
+  gsync
+
+  cd ~/code/minio
+  gupstream git@github.com:minio/minio.git
+  gsync
+
+  cd ~/code/madmin-go
+  gupstream git@github.com:minio/madmin-go.git
+  gsync
+
+  cd ~/code/object-browser
+  gupstream git@github.com:minio/object-browser.git
+  gsync
+}
+
 setup-linux () {
   setup-curl
   setup-git
