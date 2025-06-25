@@ -384,6 +384,8 @@ setup-repos(){
   gclone git@github.com:0xMALVEE/minio.git
   gclone git@github.com:0xMALVEE/madmin-go.git
   gclone git@github.com:0xMALVEE/object-browser.git
+  gclone git@github.com:0xMALVEE/mds.git
+  gclone git@github.com:0xMALVEE/minio-go.git
 
   cd ~/code/aistor-console
   gupstream git@github.com:miniohq/aistor-console.git
@@ -412,7 +414,20 @@ setup-repos(){
   cd ~/code/object-browser
   gupstream git@github.com:minio/object-browser.git
   gsync
+
+  cd ~/code/minio-go
+  gupstream git@github.com:minio/minio-go.git
+  gsync
+
+  cd ~/code/mds
+  gupstream git@github.com:miniohq/mds.git
+  gsync
 }
+
+export NPM_USERNAME="$(< ~/minio/npm.user)"
+export NPM_PASSWORD="$(< ~/minio/npm.pass)"
+
+export MINIO_LICENSE="$(< ~/minio/minio.license)"
 
 setup-linux () {
   setup-curl
