@@ -387,6 +387,8 @@ setup-repos(){
   gclone git@github.com:0xMALVEE/mds.git
   gclone git@github.com:0xMALVEE/minio-go.git
   gclone git@github.com:0xMALVEE/pkg.git
+  gclone git@github.com:0xMALVEE/minkms.git
+  gclone git@github.com:0xMALVEE/kes.git
 
   cd ~/code/aistor-console
   gupstream git@github.com:miniohq/aistor-console.git
@@ -426,6 +428,14 @@ setup-repos(){
 
   cd ~/code/pkg
   gupstream git@github.com:minio/pkg.git
+  gsync
+
+  cd ~/code/minkms
+  gupstream git@github.com:miniohq/minkms.git
+  gsync
+
+  cd ~/code/kes
+  gupstream git@github.com:miniohq/kes.git
   gsync
 }
 
