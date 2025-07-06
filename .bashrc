@@ -399,7 +399,7 @@ setup-repos(){
   gsync
 
   cd ~/code/ec
-  gupstream git@github.com:0xMALVEE/ec.git
+  gupstream git@github.com:miniohq/ec.git
   gsync
 
   cd ~/code/mc
