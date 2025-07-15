@@ -463,3 +463,27 @@ setup-linux () {
   dev-tools
   setup-ssh
 }
+
+minio-oss(){
+  cd ~/code/mc
+  gupstream git@github.com:minio/mc.git
+  gsync
+  make install
+
+  cd ~/code/minio
+  gupstream git@github.com:minio/minio.git
+  gsync
+  make install
+}
+
+minio-aistor(){
+  cd ~/code/eos
+  gupstream git@github.com:miniohq/eos.git
+  gsync
+  make install
+
+  cd ~/code/ec
+  gupstream git@github.com:miniohq/ec.git
+  gsync
+  make install
+}
