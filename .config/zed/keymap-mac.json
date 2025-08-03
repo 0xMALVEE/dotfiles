@@ -1,0 +1,54 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      // "j k": ["workspace::SendKeystrokes", "escape"]
+      "cmd-i": "editor::MoveUp",
+      "cmd-k": "editor::MoveDown",
+      "cmd-j": "editor::MoveLeft",
+      "cmd-fn-i": "editor::MoveUp",
+      "cmd-fn-k": "editor::MoveLeft",
+      "cmd-l": "editor::MoveRight",
+      "cmd-o": "editor::MoveToEndOfLine",
+      "cmd-u": "editor::MoveToBeginningOfLine",
+      "cmd-shift-u": "editor::SelectToBeginningOfLine",
+      "cmd-shift-o": "editor::SelectToEndOfLine",
+      "cmd-shift-j": "editor::SelectLeft",
+      "cmd-shift-l": "editor::SelectRight",
+      "cmd-shift-fn-l": "editor::SelectToNextWordEnd",
+      "cmd-shift-fn-j": "editor::SelectToPreviousWordStart",
+      "cmd-shift-i": "editor::SelectUp",
+      "cmd-shift-k": "editor::SelectDown",
+      "cmd-fn-shift-i": "editor::SelectUp",
+      "cmd-fn-shift-k": "editor::SelectDown",
+      "cmd-fn-l": "editor::MoveToNextWordEnd",
+      "cmd-fn-j": "editor::MoveToPreviousWordStart",
+      "fn-cmd-u": "editor::MoveToBeginning",
+      "fn-cmd-o": "editor::MoveToEnd",
+      "fn-1": ["workspace::ActivatePane", 0],
+      "fn-2": ["workspace::ActivatePane", 1],
+      "fn-3": ["workspace::ActivatePane", 2],
+      "fn-4": ["workspace::ActivatePane", 3],
+      "fn-o": ["workspace::SendKeystrokes", "cmd-shift-p outline enter"]
+    }
+  }
+]
