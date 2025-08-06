@@ -1,0 +1,44 @@
+{
+  "description": "Ignore Z for 3 seconds after pressing A or Shift+A or CapsLock+A or Command+A",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "a",
+        "modifiers": { "optional": ["any"] }
+      },
+      "to": [
+        { "key_code": "a" },
+        {
+          "set_variable": {
+            "name": "a_pressed",
+            "value": 1
+          }
+        }
+      ],
+      "to_after_key_up": [
+        {
+          "set_variable": {
+            "name": "a_pressed",
+            "value": 0
+          }
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "name": "a_pressed",
+          "type": "variable_if",
+          "value": 1
+        }
+      ],
+      "from": {
+        "key_code": "z",
+        "modifiers": { "optional": ["any"] }
+      },
+      "to": [],
+      "type": "basic"
+    }
+  ]
+}
