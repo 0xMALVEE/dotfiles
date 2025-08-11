@@ -1,0 +1,35 @@
+{
+  "description": "Remap Command to Control, Option to Command, Control to Fn",
+  "manipulators": [
+    {
+      "from": { "key_code": "left_command" },
+      "to": [{ "key_code": "left_control" }],
+      "type": "basic"
+    },
+    {
+      "from": { "key_code": "right_command" },
+      "to": [{ "key_code": "right_control" }],
+      "type": "basic"
+    },
+    {
+      "from": { "key_code": "left_option" },
+      "to": [{ "key_code": "left_command" }],
+      "type": "basic"
+    },
+    {
+      "from": { "key_code": "right_option" },
+      "to": [{ "key_code": "right_command" }],
+      "type": "basic"
+    },
+    {
+      "from": { "key_code": "left_control" },
+      "to": [{ "key_code": "fn" }],
+      "type": "basic"
+    },
+    {
+      "from": { "key_code": "right_control" },
+      "to": [{ "key_code": "fn" }],
+      "type": "basic"
+    }
+  ]
+}
