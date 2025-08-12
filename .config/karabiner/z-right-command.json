@@ -1,5 +1,5 @@
 {
-  "description": "Disable Z and remap Right Command + X to j",
+  "description": "Disable Z and remap Rightcommand ",
   "manipulators": [
     {
       "from": {
@@ -11,11 +11,8 @@
     },
     {
       "from": {
-        "key_code": "j",
-        "modifiers": {
-          "mandatory": ["right_command"],
-          "optional": ["any"]
-        }
+        "key_code": "right_command",
+        "modifiers": { "optional": ["any"] }
       },
       "to": [{ "key_code": "z" }],
       "type": "basic"
