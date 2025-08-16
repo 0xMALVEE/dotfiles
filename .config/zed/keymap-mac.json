@@ -48,7 +48,14 @@
       "fn-2": ["workspace::ActivatePane", 1],
       "fn-3": ["workspace::ActivatePane", 2],
       "fn-4": ["workspace::ActivatePane", 3],
-      "fn-o": ["workspace::SendKeystrokes", "cmd-shift-p outline enter"]
+      "fn-o": ["workspace::SendKeystrokes", "cmd-shift-p outline enter"],
+      "ctrl-z": "editor::ToggleSoftWrap"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-`": "workspace::ToggleBottomDock"
     }
   }
 ]
