@@ -13,6 +13,22 @@ gsync() {
   git checkout "$default_branch" && git fetch upstream && git rebase "upstream/$default_branch" && git push
 }
 
+gpr() {
+  if [ -z "$1" ]; then
+    echo "Usage: gpr <PR_NUMBER>"
+    return 1
+  fi
+
+  if ! git remote | grep -q "^upstream$"; then
+    echo "Upstream remote not found."
+    return 1
+  fi
+
+  local pr_branch="pr-$1"
+
+  git fetch upstream pull/$1/head:$pr_branch && git checkout $pr_branch
+}
+
 gclone() {
   if [ -z "$1" ]; then
     echo "Usage: git_clone_code <git_repo_url>"
