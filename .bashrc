@@ -405,6 +405,21 @@ setup-repos(){
   gclone git@github.com:0xMALVEE/pkg.git
   gclone git@github.com:0xMALVEE/minkms.git
   gclone git@github.com:0xMALVEE/kes.git
+  gclone git@github.com:0xMALVEE/minio-dotnet.git
+  gclone git@github.com:0xMALVEE/sidekick.git
+  gclone git@github.com:0xMALVEE/warp.git
+
+  cd ~/code/warp
+  gupstream git@github.com:minio/warp.git
+  gsync
+
+  cd ~/code/sidekick
+  gupstream git@github.com:miniohq/sidekick.git
+  gsync
+
+  cd ~/code/minio-dotnet
+  gupstream git@github.com:minio/minio-dotnet.git
+  gsync
 
   cd ~/code/aistor-console
   gupstream git@github.com:miniohq/aistor-console.git
