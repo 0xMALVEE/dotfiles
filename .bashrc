@@ -399,7 +399,6 @@ setup-repos(){
   gclone git@github.com:0xMALVEE/mc.git
   gclone git@github.com:0xMALVEE/minio.git
   gclone git@github.com:0xMALVEE/madmin-go.git
-  gclone git@github.com:0xMALVEE/object-browser.git
   gclone git@github.com:0xMALVEE/mds.git
   gclone git@github.com:0xMALVEE/minio-go.git
   gclone git@github.com:0xMALVEE/pkg.git
@@ -443,10 +442,6 @@ setup-repos(){
 
   cd ~/code/madmin-go
   gupstream git@github.com:minio/madmin-go.git
-  gsync
-
-  cd ~/code/object-browser
-  gupstream git@github.com:minio/object-browser.git
   gsync
 
   cd ~/code/minio-go
